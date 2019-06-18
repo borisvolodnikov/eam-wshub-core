@@ -108,16 +108,31 @@
 		<tag>HEAD</tag>
 		<url>https://github.com/cern-eam/eam-wshub-core</url>
 	</scm>
+	
+	<repositories>
+		<repository>
+  <id>advoco-visualstudio-com-advoco-advoco</id>
+  <url>https://advoco.pkgs.visualstudio.com/_packaging/Advoco/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
+	</repositories>
 
 	<distributionManagement>
-		<repository>
-			<id>eis</id>
-			<url>https://edmstools.cern.ch/nexus/content/repositories/ase-eds-releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>eis</id>
-			<url>https://edmstools.cern.ch/nexus/content/repositories/ase-eds-snapshots</url>
-		</snapshotRepository>
+<repository>
+  <id>advoco-visualstudio-com-advoco-advoco</id>
+  <url>https://advoco.pkgs.visualstudio.com/_packaging/Advoco/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
 	</distributionManagement>
 
 	<build>
@@ -140,18 +155,6 @@
 					<useReleaseProfile>false</useReleaseProfile>
 					<releaseProfiles>release</releaseProfiles>
 					<goals>deploy</goals>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.sonatype.plugins</groupId>
-				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.6.8</version>
-				<extensions>true</extensions>
-				<configuration>
-					<serverId>oss-cern-eam</serverId>
-					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-					<autoReleaseAfterClose>false</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
 		</plugins>
