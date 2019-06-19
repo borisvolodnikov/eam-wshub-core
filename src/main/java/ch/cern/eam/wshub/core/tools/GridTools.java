@@ -3,6 +3,7 @@ package ch.cern.eam.wshub.core.tools;
 import ch.cern.eam.wshub.core.services.grids.entities.GridRequestCell;
 import ch.cern.eam.wshub.core.services.grids.entities.GridRequestResult;
 import ch.cern.eam.wshub.core.services.grids.entities.GridRequestRow;
+import javafx.scene.control.Cell;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
